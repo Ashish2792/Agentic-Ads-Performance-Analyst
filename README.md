@@ -2,16 +2,6 @@
 
 This repository implements an **end-to-end multi-agent system** capable of analyzing Meta (Facebook) ad performance, diagnosing performance drop causes, validating statistically, scoring creative health using CHS, and then generating new ad creative variations grounded in data.
 
-This fulfils the assignment rubric by delivering:
-
-| Rubric Item | Achieved Through |
-|---|---|
-| Agentic architecture (30%) | Multi-agent pipeline Planner → Data → Insight → Metric Eval → CHS → Creative Gen → Aggregator |
-| Insight quality (25%) | Evidence-backed hypotheses with ROAS/CTR delta calculations |
-| Validation Layer (20%) | Bootstrap + CTR z-test + confidence scoring + CHS fusion |
-| Prompt Design (15%) | THINK → ANALYZE → CONCLUDE structured prompts for all agents |
-| Creative Recommendations (10%) | Variant generation conditioned on CHS weaknesses & CTR |
-
 ---
 
 ## 🔥 Core Features
