@@ -76,31 +76,38 @@ T6 ──▶ 📦 7. AGGREGATOR
           ✔ report.md (human readable)
 
 flowchart TD
-    A[User Query] --> B[Planner Agent]
 
-    B --> T1[T1: data_load_summary]
-    T1 --> C[Data Agent]
+A[📥 User Query] --> B[🧭 Planner Agent]
 
-    C --> T2[T2: insight_generation]
-    T2 --> D[Insight Agent]
+%% ========= Stage 1: Data =========
+B --> T1[T1 ▶ data_load_summary]
+T1 --> C[📊 Data Agent]
 
-    D --> T3[T3: metric_evaluation]
-    T3 --> E[Metric Evaluator]
+%% ========= Stage 2: Insight Generation =========
+C --> T2[T2 ▶ insight_generation]
+T2 --> D[🕵 Insight Agent]
 
-    C --> T4[T4: creative_evaluation]
-    T4 --> F[Creative Evaluator (CHS)]
+%% ========= Stage 3: Metric Evaluation =========
+D --> T3[T3 ▶ metric_evaluation]
+T3 --> E[📏 Metric Evaluator]
 
-    E --> T5[T5: creative_generation]
-    F --> T5
-    T5 --> G[Creative Generator]
+%% ========= Stage 4: Creative Evaluation (CHS) =========
+C --> T4[T4 ▶ creative_evaluation]
+T4 --> F[🎨 Creative Evaluator (CHS)]
 
-    G --> T6[T6: final_aggregation]
-    E --> T6
-    F --> T6
-    T6 --> H[Aggregator / Output Writer]
+%% ========= Stage 5: Creative Generation =========
+E --> T5[T5 ▶ creative_generation]
+F --> T5
+T5 --> G[🧪 Creative Generator]
 
-    H -->|insights.json| I[[📝 Insights]]
-    H -->|creatives.json| J[[🎨 Creatives]]
-    H -->|report.md| K[[📄 Final Report]]
-    H -->|run_log.json| L[[📂 Logs]]
+%% ========= Stage 6: Aggregation & Report Output =========
+G --> T6[T6 ▶ final_aggregation]
+E --> T6
+F --> T6
+T6 --> H[📦 Aggregator / Output Writer]
 
+%% ========= Final Artifacts =========
+H -->|insights.json| I[[📝 Insights]]
+H -->|creatives.json| J[[🎨 Creative Ideas]]
+H -->|report.md| K[[📄 Final Report]]
+H -->|run_log.json| L[[📂 Logs]]
