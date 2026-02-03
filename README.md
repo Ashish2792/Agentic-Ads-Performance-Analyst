@@ -1,4 +1,4 @@
-# Kasparro — Agentic Facebook Ads Performance Analyst
+# Multi-Agent Facebook Ads Performance Analyst
 
 This repository implements an end-to-end **multi-agent system** for analyzing Meta (Facebook) ads performance, diagnosing ROAS / CTR drops, validating hypotheses quantitatively, scoring creatives with a **Creative Health Score (CHS)**, and generating **data-grounded creative variants**.
 
